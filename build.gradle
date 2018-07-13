@@ -1,0 +1,30 @@
+group 'nl.arnedeboth'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/scala']
+        }
+    }
+    test {
+        scala {
+            srcDirs = ['test/scala']
+        }
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.12.6'
+    compile 'com.google.cloud:google-cloud-datastore:1.35.0'
+
+    testCompile 'org.scalatest:scalatest_2.12:3.0.5'
+    testCompile 'junit:junit:4.12'
+}
+
